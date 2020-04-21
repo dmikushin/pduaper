@@ -195,7 +195,7 @@ typedef signed long    SNUM32;
   /// D.1.11 IOCTL event queue mode type values
   ///////////////////////////////////////////////////////////////////////////////
 
-  //typedef enum E_PDU_QUEUE_MODE
+  typedef enum E_PDU_QUEUE_MODE
   {
     PDU_QUE_UNLIMITED = 0x00000000,
     PDU_QUE_LIMITED = 0x00000001,
@@ -330,7 +330,7 @@ typedef signed long    SNUM32;
   /// B.3.6
   ///////////////////////////////////////////////////////////////////////////////
 
-  ////typedef enum E_PDU_PL
+  typedef enum E_PDU_PL
   {
     PDU_PL_UNDEFINED = 0,
     PDU_PL_APPLICATION,
@@ -432,7 +432,7 @@ typedef signed long    SNUM32;
   /// 11.1.4.4 Item for resource status information via PDUGetResourceStatus
   ///////////////////////////////////////////////////////////////////////////////
 
-  //typedef struct
+  typedef struct
   {
     UNUM32  hMod;
     UNUM32  ResourceId;
@@ -741,7 +741,7 @@ typedef signed long    SNUM32;
   /// B.3.3.1 ComParam BYTEFIELD data type
   ///////////////////////////////////////////////////////////////////////////////
 
-  //typedef struct
+  typedef struct
   {
     UNUM32   ParamMaxLen;
     UNUM32   ParamActLen;
@@ -958,8 +958,6 @@ typedef signed long    SNUM32;
   ///////////////////////////////////////////////////////////////////////////////
   // See PDU Specification for details
   T_PDU_ERROR  PDUUnlockResource(UNUM32 hMod, UNUM32 hCll, UNUM32 uiLockMask);
-
-}
 
 #ifdef __cplusplus
 } // extern "C"
